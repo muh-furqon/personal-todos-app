@@ -1,16 +1,55 @@
-export default function TodoForm() {
+import { useState } from "react"
+
+export default function TodoForm({addTodo}) {
+    const [todoTitle, setTodoTitle] = useState('');
+    const [todoDescription, setTodoDescription] = useState('');
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (todoTitle.trim() === '') return;
+        addTodo({
+            text: todoTitle,
+            title: todoTitle,
+            description: todoDescription,
+            completed: false,
+        });
+
+        console.log('Todo added:', {
+            text: todoTitle,
+            title: todoTitle,
+            description: todoDescription,
+            completed: false,
+            typeofText: typeof todoTitle,
+        });
+        setTodoTitle('');
+        setTodoDescription('');
+    }
     return (
-        <form className="w-full max-w-lg" action="POST">
-            <label htmlFor="task_name">Task Name</label>
-            <input type="text" name="task_name" />
+        <form onSubmit={handleSubmit} className="mt-6">
+            <div className="flex">
+                <input 
+                    type="text"
+                    className="flex-grow px-4 py-2 mr-2 text-white bg-gray-700 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="Todo title.."
+                    value={todoTitle}
+                    onChange={(e) => setTodoTitle(e.target.value)}
+                />
 
-            <label htmlFor="task_date">Date</label>
-            <input type="date" name="task_date" id="" />
+                <input 
+                    type="text"
+                    className="flex-grow px-4 py-2 mr-2 text-white bg-gray-700 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="Todo Description.."
+                    value={todoDescription}
+                    onChange={(e) => setTodoDescription(e.target.value)}
+                />
 
-            <label htmlFor="task_desc">Task Description</label>
-            <input type="text" name="task_desc" id="" />
-
-            <button type="submit">Create Task</button>
+                <button 
+                    type="submit" 
+                    className="px-4 py-2 font-semibold text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+                >
+                    Add
+                </button>
+            </div>
         </form>
     )
 }
