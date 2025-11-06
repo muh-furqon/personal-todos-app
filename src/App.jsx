@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react';
 import { useLocalStorage } from './hooks/useLocalStorage'
-import TodoForm from './components/ToDoForm';
+import TodoForm from './components/TodoForm';
 import TodoList from './components/TodoList';
 import TodoFilter from './components/TodoFilter';
 
