@@ -1,12 +1,49 @@
-# React + Vite
+# Personal Todos App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple and intuitive application for managing your personal to-do lists. Built with modern web technologies like React and Vite, it offers a fast and responsive user experience.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+*   **Create, Read, Update, and Delete (CRUD)** tasks.
+*   Mark tasks as complete.
+*   Filter tasks by their completion status.
+*   Fast and responsive UI, thanks to Vite and React.
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+*   **React**: A JavaScript library for building user interfaces.
+*   **Vite**: A next-generation frontend tooling that provides a faster and leaner development experience.
+*   **ESLint**: For identifying and reporting on patterns found in ECMAScript/JavaScript code.
+
+## 🚀 Getting Started
+
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+Make sure you have Node.js installed on your machine. You can use `npm`, `yarn`, or `pnpm` as your package manager.
+
+### Installation
+
+1.  Clone the repository to your local machine:
+    ```sh
+    git clone https://github.com/your-username/personal-todos-app.git
+    ```
+2.  Navigate into the project directory:
+    ```sh
+    cd personal-todos-app
+    ```
+3.  Install the dependencies:
+    ```sh
+    npm install
+    ```
+
+### Running the Development Server
+
+To start the Vite development server with Hot Module Replacement (HMR), run:
+
+```sh
+npm run dev
+```
+
+Open your browser and go to `http://localhost:5173` to see the application in action.
