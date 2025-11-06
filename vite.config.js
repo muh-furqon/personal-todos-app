@@ -5,5 +5,5 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: '/personal-todos-app/', // Set the base path for GitHub Pages
+  base: './', // Set the base path for GitHub Pages
 })
